@@ -2,7 +2,8 @@ import axios from 'axios';
 import { Location, GeocodeResult, JourneyAnalysisResponse } from '../types';
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:5000/api';
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  'https://window-side-navigator-journey-bus.onrender.com/api';
 
 export async function searchLocationSuggestions(query: string): Promise<GeocodeResult[]> {
   if (!query || query.trim().length < 2) return [];
